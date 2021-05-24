@@ -4,5 +4,5 @@ insensitive=true
 hide_scroll=true
 lines=5
 no_actions=true
-term=alacritty
+term=sakura
 width=600
