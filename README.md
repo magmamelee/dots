@@ -1,5 +1,5 @@
 # Background
-Forked from petrolblue's own repository named dots, I optimized them for my laptop, an HP Elitebook 8440p. However, I have deleted some directories that I have deemed not important for me, such as NeoVim and Alacritty configuration files. If you would like the original folders, files, and more, I would highly encourage you to visit petrolblue's dots repository, which is linked at the end of this document.
+I optimized these dotfiles for my laptop, an HP Elitebook 8440p. However, I have deleted some directories that I have deemed not important for me, such as NeoVim and Alacritty configuration files. If you would like the original folders, files, and more, I would highly encourage you to visit petrolblue's dots repository, which is linked at the end of this document.
 
 # Instructions
 
@@ -9,6 +9,4 @@ I would highly encourage you _not_ to copy paste everything, especially if you d
 
 # Closing
 
-Thank you for reading and taking a look at my forked repository of petrolblue's dots repo. I will link his repo here:
-https://github.com/petrolblue/dots
-If you would like this page translated to a different language, feel free to do so or let me know.
+Thank you for taking the time to check out my repo! If you would like this page translated to a different language, feel free to do so or let me know.
