@@ -1,5 +1,5 @@
 # Background
-I optimized these dotfiles for my laptop, an HP Elitebook 8440p. However, I have deleted some directories that I have deemed not important for me, such as NeoVim and Alacritty configuration files. If you would like the original folders, files, and more, I would highly encourage you to visit petrolblue's dots repository, which is linked at the end of this document.
+I optimized these dotfiles for my laptop, an HP Elitebook 8440p. However, I have deleted some directories that I have deemed not important for me, such as NeoVim and Alacritty configuration files. If you would like the original folders, files, and more, I would highly encourage you to visit the original repo.
 
 # Instructions
 
