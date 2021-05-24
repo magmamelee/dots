@@ -28,7 +28,7 @@ exec swayidle -w \
 # input configuration
 
 input * {
-	xkb_layout de
+	xkb_layout us
 }
 # keybindings
 
