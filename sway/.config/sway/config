@@ -8,13 +8,13 @@ set $up k
 set $right l
 
 # default apps
-set $term alacritty
+set $term sakura
 set $menu wofi --show=drun --lines=9 --prompt=""
 
 # output configuration
 
 output * bg ~/.config/wallpapers/aenami_stay_UltraHD.png fill
-output DP-1 mode 2560x1440@143.999Hz
+output DP-1 mode 1366x768@60.02Hz
 
 exec swayidle -w \
           timeout 300 'swaylock -f -c 2e3440' \
@@ -28,7 +28,7 @@ exec swayidle -w \
 # input configuration
 
 input * {
-	xkb_layout de
+	xkb_layout us
 }
 # keybindings
 
