@@ -118,13 +118,13 @@
       }
   },
   "custom/github": {
-    "format": "",
-    "on-click": "xdg-open https://github.com",
+    "format": "",
+    "on-click": "exec firefox",
     "tooltip": false
   },
   "custom/gerrit": {
     "format": "",
-    "on-click": "xdg-open https://review.lineageos.org/q/status:merged+branch:lineage-18.1",
+    "on-click": "xdg-open https://github.com/petrolblue",
     "tooltip": false
   },
   "custom/aw": {
