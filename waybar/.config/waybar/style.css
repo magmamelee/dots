@@ -1,30 +1,30 @@
 
 * {
 	border: none;
-	font-size: 14px;
-	margin-top: 3px;
+	font-size: 15px;
+	margin-top: 5px;
 	font-family: Fira Code Nerd Font Mono;
 	font-style: normal;
 	opacity: 1;
 }
 window#waybar {
 	background-color: transparent;
-	color: #d8dee9;
+	color: #bebebe;
 }
 #workspaces, #tags {
-	background-color: #282828;
+	background-color: #2a2a2a;
 	border-radius: 10px;
 }
 #workspaces button, #tags button {
   background-color: transparent;
-	color: #fbf1c7;
+	color: #bebebe;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 0px;
 }
 #window {
-	color: #fbf1c7;
-	background-color: #282828;
+	color: #bebebe;
+	background-color: #2a2a2a;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 10px;
@@ -34,7 +34,7 @@ window#waybar {
   to {opacity: 1;}
 }
 window#waybar.empty {
-	/* background-color: #2e3440; */
+	/* background-color: #2a2a2a; */
 }
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover, #tags button:hover {
@@ -43,9 +43,6 @@ window#waybar.empty {
 }
 #workspaces button.focused, #tags button.focused {
 	color: #bb61fa;
-}
-#workspaces button.urgent {
-	color:  #BF616A;
 }
 #mode {
 	background-color: #910909;
@@ -60,7 +57,7 @@ window#waybar.empty {
 }
 /* BROWSER BOOKMARKS */
 #custom-github, #custom-gerrit, #custom-aw, #custom-bluetooth {
-	background-color: #282828;
+	background-color: #2a2a2a;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -90,30 +87,30 @@ window#waybar.empty {
 }
 /* WIDGETS */
 #cpu, #memory, #backlight, #network, #pulseaudio, #battery {
-	background-color: #282828;
+	background-color: #2a2a2a;
 	padding-left: 6px;
 	padding-right: 6px;
 }
 #pulseaudio {
-	color: #fbf1c7;
+	color: #bebebe;
 	border-radius: 10px 0px 0px 10px;
 }
 #cpu {
-	color: #fbf1c7;
+	color: #bebebe;
 }
 #memory {
-	color: #fbf1c7;
+	color: #bebebe;
 }
 #network {
-  color: #fbf1c7;
+  color: #bebebe;
 	border-radius: 0px 10px 10px 0px;
 }
 #pulseaudio.muted {
 	border-radius: 10px 0px 0px 10px;
-	color: #fbf1c7;
+	color: #bebebe;
 }
 #battery {
-	background-color: #2e3440;
+	background-color: #2a2a2a;
 	color: #FFFFFF;
 	border-radius: 10px 10px 10px 10px;
 	padding: 6px 6px 6px 6px;
@@ -139,11 +136,11 @@ window#waybar.empty {
 	animation-direction: alternate;
 }
 label:focus {
-	background-color: #2e3440;
+	background-color: #2a2a2a;
 }
 #clock {
-	background-color: #689d6a;
-	color: #282828;
+	background-color: #bebebe;
+	color: #2a2a2a;
 	border-radius: 10px 10px 10px 10px;
 	padding: 6px 10px 6px 10px;
 	margin-left: 8px;

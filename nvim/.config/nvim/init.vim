@@ -5,28 +5,30 @@
 " |_| |_|\___|\___/ \_/ |_|_| |_| |_|  "
 "				       				   "
 "--------------------------------------"
-"
+
+""""""""""""""""""""""""""""""""""""""""
+" PLUGINS 							   "
+""""""""""""""""""""""""""""""""""""""""
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'davidhalter/jedi-vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'machakann/vim-highlightedyank'
 Plug 'tmhedberg/SimpylFold'
 Plug 'jiangmiao/auto-pairs'
-Plug 'morhetz/gruvbox'
+Plug 'kien/ctrlp.vim'
 call plug#end()
-
+									    		
+""""""""""""""""""""""
+" normal stuff 	     "
+""""""""""""""""""""""
 set number
 set ttyfast
 set showmode
@@ -39,44 +41,30 @@ set nobackup
 set nowritebackup
 set shortmess=I
 set nowb
+set noshowmode
 set noswapfile
-syntax enable
 set shiftwidth=4
 set smarttab
 set tabstop=4
 set ignorecase
 set encoding=UTF-8
-set relativenumber
 set scrolloff=25
 set termguicolors
+set laststatus=0
 
-" presence.nvim
-let g:presence_auto_update 			= 1
-let g:presence_neovim_image_text 	= "The One True Text Editor"
-let g:presence_main_image 			= "neovim"
-let g:presence_client_id 			= "793271441293967371"
-let g:presence_log_level 			= "debug"
-let g:presence_debounce_timeout 	= 10
-let g:presence_enable_line_number 	= 0
-let g:presence_editing_text 		= "Editing %s"
-let g:presence_file_explorer_text 	= "Browsing %s"
-let g:presence_git_commit_text 		= "Committing changes"
-let g:presence_plugin_manager_text 	= "Managing plugins"
-let g:presence_reading_text 		= "Reading %s"
-let g:presence_workspace_text 		= "Working on %s"
-let g:presence_line_number_text 	= "Line %s out of %s"
-" Highlighted yank
-let g:highlightedyank_highlight_duration = 1000
+""""""""""""""""""""""
+" config for plugins "
+""""""""""""""""""""""
+
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 " Jedi
 let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
 " NERDTree
 let g:NERDTreeShowHidden = 1 
 let g:NERDTreeIgnore = ['^node_modules$'] " ignore node_modules to increase load speed 
@@ -109,18 +97,6 @@ let g:NERDTreePatternMatchHighlightColor = {}
 let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red 
 let g:WebDevIconsDefaultFolderSymbolColor = s:beige 
 let g:WebDevIconsDefaultFileSymbolColor = s:blue 
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
 " Neoformat
 let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_retab = 1
@@ -141,4 +117,4 @@ let g:fzf_action = {
 
 hi HighlightedyankRegion cterm=reverse gui=reverse
 
-colorscheme gruvbox
+colorscheme sayo

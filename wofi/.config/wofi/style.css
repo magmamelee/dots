@@ -1,7 +1,7 @@
 window {
     margin: 5px;
     border: 1px solid white;
-    background-color: #2e3440;
+    background-color: #282828;
     border-radius: 10px;
 }
 
@@ -10,7 +10,6 @@ window {
     background: transparent;
     color: white;
     border-radius: 5px;
-    border: 1px #81a1c1; */
     /* background-color: blue; */
 }
 
@@ -34,12 +33,12 @@ window {
 }
 
 #entry:selected {
-    background-color: #81a1c1;
+    background-color: #7a675e;
     /* text-decoration: underline; */
     /* text-decoration-color: white; */
 }
 
 #text:selected {
-    background-color: #81a1c1;
+    background-color: #7a675e;
     text-decoration-color: white;
 }

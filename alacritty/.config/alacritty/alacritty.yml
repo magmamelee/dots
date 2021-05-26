@@ -70,11 +70,11 @@ window:
 
 font:
   normal:
-    family: Fira Code Nerd Font Mono
+    family: Jetbrains Mono Nerd Font
 
     style: Regular
 
-  size: 11.5
+  size: 12
 
   #offset:
   #  x: 0

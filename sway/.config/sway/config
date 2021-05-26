@@ -1,5 +1,4 @@
 # Variables
-
 set $mod Mod4
 set $gnome-schema org.gnome.desktop.interface
 set $left h
@@ -12,20 +11,13 @@ set $term foot
 set $menu wofi --show=drun --lines=9 --prompt=""
 
 # output configuration
-
-output * bg ~/.config/wallpapers/bg_7.jpg fill
+output * bg ~/.config/wallpapers/stephen-leonardi-ZFOjkkUlots-unsplash.jpg fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
           timeout 300 'swaylock -f -c 2e3440' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-# input configuration
 
 input * {
 	xkb_layout de
@@ -47,11 +39,6 @@ input * {
     # Start your launcher
     bindsym $mod+d exec $menu
 
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
     floating_modifier $mod normal
 
     # Reload the configuration file
@@ -158,11 +145,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Window decoration
-# class                 border   indicator child_border
-client.focused          #689d6a  #689d6a   #689d6a
-client.focused_inactive #689d6a  #689d6a   #689d6a
-client.unfocused        #3c3836  #3c3836   #3c3836
+# class                 border  backgr. text    indicator child_border
+client.focused          #937a8a #7A675E #dcbb8c #7A675E   #637a8a
+client.focused_inactive #3a3a3a #464646 #eceff4 #464646   #3a3a3a
+client.unfocused        #3a3a3a #464646 #eceff4 #464646   #3a3a3a
 
 gaps outer 20
 gaps inner 20
@@ -171,5 +157,8 @@ default_border pixel 4
 bar {
     swaybar_command waybar
 }
+
+exec_always mako
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 include /etc/sway/config.d/*
