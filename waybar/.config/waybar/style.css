@@ -12,19 +12,19 @@ window#waybar {
 	color: #d8dee9;
 }
 #workspaces, #tags {
-	background-color: #2e3440;
+	background-color: #282828;
 	border-radius: 10px;
 }
 #workspaces button, #tags button {
   background-color: transparent;
-	color: #d8dee9;
+	color: #fbf1c7;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 0px;
 }
 #window {
-	color: #d8dee9;
-	background-color: #2e3440;
+	color: #fbf1c7;
+	background-color: #282828;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 10px;
@@ -60,7 +60,7 @@ window#waybar.empty {
 }
 /* BROWSER BOOKMARKS */
 #custom-github, #custom-gerrit, #custom-aw, #custom-bluetooth {
-	background-color: #2e3440;
+	background-color: #282828;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -90,27 +90,27 @@ window#waybar.empty {
 }
 /* WIDGETS */
 #cpu, #memory, #backlight, #network, #pulseaudio, #battery {
-	background-color: #2e3440;
+	background-color: #282828;
 	padding-left: 6px;
 	padding-right: 6px;
 }
 #pulseaudio {
-	color: #b8b8b8;
+	color: #fbf1c7;
 	border-radius: 10px 0px 0px 10px;
 }
 #cpu {
-	color: #b8b8b8;
+	color: #fbf1c7;
 }
 #memory {
-	color: #b8b8b8;
+	color: #fbf1c7;
 }
 #network {
-  color: #b8b8b8;
+  color: #fbf1c7;
 	border-radius: 0px 10px 10px 0px;
 }
 #pulseaudio.muted {
 	border-radius: 10px 0px 0px 10px;
-	color: #b8b8b8;
+	color: #fbf1c7;
 }
 #battery {
 	background-color: #2e3440;
@@ -142,8 +142,8 @@ label:focus {
 	background-color: #2e3440;
 }
 #clock {
-	background-color: #a3be8c;
-	color: #000000;
+	background-color: #689d6a;
+	color: #282828;
 	border-radius: 10px 10px 10px 10px;
 	padding: 6px 10px 6px 10px;
 	margin-left: 8px;

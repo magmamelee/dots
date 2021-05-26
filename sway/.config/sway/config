@@ -1,19 +1,19 @@
 # Variables
 
 set $mod Mod4
-
+set $gnome-schema org.gnome.desktop.interface
 set $left h
 set $down j
 set $up k
 set $right l
 
 # default apps
-set $term alacritty
+set $term foot
 set $menu wofi --show=drun --lines=9 --prompt=""
 
 # output configuration
 
-output * bg ~/.config/wallpapers/aenami_stay_UltraHD.png fill
+output * bg ~/.config/wallpapers/bg_7.jpg fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
@@ -158,9 +158,15 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Window decoration
+# class                 border   indicator child_border
+client.focused          #689d6a  #689d6a   #689d6a
+client.focused_inactive #689d6a  #689d6a   #689d6a
+client.unfocused        #3c3836  #3c3836   #3c3836
+
 gaps outer 20
 gaps inner 20
-default_border pixel 0
+default_border pixel 4
 
 bar {
     swaybar_command waybar

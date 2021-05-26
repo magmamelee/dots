@@ -21,5 +21,8 @@ test -r "~/scripts/.dir_colors" && eval $(dircolors ~/scripts/.dir_colors)
 export SPICETIFY_INSTALL="/home/david/spicetify-cli"
 export PATH="$SPICETIFY_INSTALL:$PATH"
 export MOZ_DBUS_REMOTE=1
+export MOZ_ENABLE_WAYLAND=1
+export YAPF="/home/david/.local/bin"
+export PATH="$YAPF:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
