@@ -59,7 +59,6 @@ set laststatus=0
 " ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
 " Jedi
 let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"

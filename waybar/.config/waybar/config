@@ -5,10 +5,6 @@
   "width": 1920, // Waybar width
   // Bar
   "modules-left": [
-    "custom/github",
-    "custom/gerrit",
-    "custom/aw",
-    "custom/bluetooth",
     "sway/workspaces",
     "sway/mode",
     "custom/spotify"
