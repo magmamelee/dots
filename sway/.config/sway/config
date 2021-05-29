@@ -10,7 +10,7 @@ set $term foot
 set $menu wofi --show=drun --lines=9 --prompt=""
 
 # output configuration
-output * bg ~/.config/wallpapers/stephen-leonardi-ZFOjkkUlots-unsplash.jpg fill
+output * bg ~/.config/wallpapers/wallhaven-nmekk8.png fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
