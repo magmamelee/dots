@@ -6,13 +6,13 @@ All Applications I use to make these dotfiles work they way they should.
 
 * distro ~ arch
 * wm ~ sway
-* terminal ~ foot
+* terminal ~ alacritty
 * shell ~ zsh
 * text editor ~ neovim
-* file manager ~ none, i just use the terminal
+* file manager ~ nautilus
 * bar ~ waybar
 * application launcher ~ wofi
-* fetch ~ fet.sh-git
+* fetch ~ fet.sh
 
 ### installation
 

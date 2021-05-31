@@ -10,7 +10,7 @@
 " PLUGINS 							   "
 """"""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/plugged')
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
