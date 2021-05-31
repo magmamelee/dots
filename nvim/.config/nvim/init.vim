@@ -15,14 +15,10 @@ Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'ryanoasis/vim-devicons'
-Plug 'davidhalter/jedi-vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'scrooloose/nerdcommenter'
-Plug 'sbdchd/neoformat'
-Plug 'davidhalter/jedi-vim'
-Plug 'tmhedberg/SimpylFold'
 Plug 'jiangmiao/auto-pairs'
+Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 call plug#end()
 									    		
@@ -100,20 +96,17 @@ let g:WebDevIconsDefaultFileSymbolColor = s:blue
 let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
+" Airline
+let g:airline_theme='nord'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 noremap <silent> <C-b> :NERDTreeToggle<CR>
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 nnoremap <leader>pv :NERDTreeFind<bar> :vertical resize 45<CR>
-nnoremap <C-p> :GFiles<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
 
 hi HighlightedyankRegion cterm=reverse gui=reverse
 
-colorscheme sayo
+colorscheme nord

@@ -1,7 +1,7 @@
 window {
     margin: 5px;
     border: 1px solid white;
-    background-color: #282828;
+    background-color: #2e3440;
     border-radius: 10px;
 }
 
@@ -33,12 +33,12 @@ window {
 }
 
 #entry:selected {
-    background-color: #7a675e;
+    background-color: #5e81ac;
     /* text-decoration: underline; */
     /* text-decoration-color: white; */
 }
 
 #text:selected {
-    background-color: #7a675e;
+    background-color: #5e81ac;
     text-decoration-color: white;
 }

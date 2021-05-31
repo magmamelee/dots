@@ -7,8 +7,8 @@
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
-    "custom/spotify"
   ],
+
   "modules-center": ["sway/window"],
   "modules-right": [
     "pulseaudio",
@@ -19,6 +19,7 @@
     "battery",
     "clock",
   ],
+
   // Modules
   "sway/workspaces": {
     "disable-scroll": true,
@@ -33,11 +34,11 @@
     "format": "{}",
     "max-length": 30
   },
+
   "clock": {
     "timezone": "Europe/Berlin",
     "format": "{:%H:%M}",
     "format-alt": "{:%d-%m-%Y}",
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><big>{calendar}</big></tt>",
   },
   "cpu": {
     "interval": 30,
@@ -113,24 +114,4 @@
         "default": ""
       }
   },
-  "custom/github": {
-    "format": "",
-    "on-click": "exec firefox",
-    "tooltip": false
-  },
-  "custom/gerrit": {
-    "format": "",
-    "on-click": "xdg-open https://github.com/petrolblue",
-    "tooltip": false
-  },
-  "custom/aw": {
-    "format": "",
-    "on-click": "xdg-open https://wiki.archlinux.org/",
-    "tooltip": false
-  },
-  "custom/bluetooth": {
-    "format": "",
-    "on-click": "$HOME/.config/scripts/bluetooth.sh",
-    "tooltip": false
-  }
 }

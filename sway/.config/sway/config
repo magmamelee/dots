@@ -6,11 +6,11 @@ set $up k
 set $right l
 
 # default apps
-set $term foot
+set $term alacritty
 set $menu wofi --show=drun --lines=9 --prompt=""
 
 # output configuration
-output * bg ~/.config/wallpapers/wallhaven-nmekk8.png fill
+output * bg ~/.config/wallpapers/gloomy_pixel_forest.jpg fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
@@ -27,7 +27,7 @@ input * {
     bindsym $mod+Return exec $term
 
 	# open browser
-	bindsym $mod+Shift+Return exec brave
+	bindsym $mod+Shift+Return exec firefox
 
     # take screenshot
     bindsym $mod+Shift+s exec swaygrab region
@@ -148,9 +148,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #937a8a #7A675E #dcbb8c #7A675E   #637a8a
-client.focused_inactive #3a3a3a #464646 #eceff4 #464646   #3a3a3a
-client.unfocused        #3a3a3a #464646 #eceff4 #464646   #3a3a3a
+client.focused          #5e81ac #4c566a #dcbb8c #5e81ac   #5e81ac
+client.focused_inactive #4c566a #4c566a #eceff4 #4c566a   #4c566a
+client.unfocused        #4c566a #4c566a #eceff4 #4c566a   #4c566a
+
+# windoe rules
+for_window [app_id="pycharm"] floating enable
 
 gaps outer 20
 gaps inner 20
