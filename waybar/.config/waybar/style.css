@@ -1,7 +1,5 @@
 
 * {
-	border: none;
-	border-color: #2e3440;
 	font-size: 14px;
 	margin-top: 5px;
 	font-family: Fira Code Nerd Font Mono;
@@ -121,7 +119,7 @@ label:focus {
 	background-color: #2e3440;
 }
 #clock {
-	background-color: #81a1c1;
+	background-color: #5e81ac;
 	color: #2e3440;
 	border-radius: 5px;
 	padding: 6px 10px 6px 10px;

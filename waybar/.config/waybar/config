@@ -22,7 +22,7 @@
 
   // Modules
   "sway/workspaces": {
-    "disable-scroll": true,
+    "disable-scroll": false,
     "all-outputs": true,
     "format": "{icon}",
     "icon-size": 15
@@ -33,6 +33,10 @@
   "sway/window": {
     "format": "{}",
     "max-length": 30
+  },
+
+  "power": {
+  	"format":"", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Suspend' 'swaymsg exec systemctl suspend' -b 'shutdown' 'systemctl shutdown'"
   },
 
   "clock": {

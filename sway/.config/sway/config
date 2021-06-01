@@ -21,13 +21,11 @@ exec swayidle -w \
 input * {
 	xkb_layout de
 }
+
 # keybindings
 
     # Start a terminal
     bindsym $mod+Return exec $term
-
-	# open browser
-	bindsym $mod+Shift+Return exec firefox
 
     # take screenshot
     bindsym $mod+Shift+s exec swaygrab region
@@ -126,8 +124,6 @@ input * {
     # Show the next scratchpad window or hide the focused scratchpad window.
     bindsym $mod+minus scratchpad show
 
-    for_window [app_id="pycharm"] floating enable
-
 # resizing containers
 
 mode "resize" {
@@ -141,27 +137,29 @@ mode "resize" {
     bindsym Up resize shrink height 10px
     bindsym Right resize grow width 10px
 
-    # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# window decorations whatnot
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #5e81ac #4c566a #dcbb8c #5e81ac   #5e81ac
 client.focused_inactive #4c566a #4c566a #eceff4 #4c566a   #4c566a
 client.unfocused        #4c566a #4c566a #eceff4 #4c566a   #4c566a
 
-# windoe rules
-for_window [app_id="pycharm"] floating enable
-
 gaps outer 20
 gaps inner 20
 default_border pixel 4
 
+# bar
+
 bar {
     swaybar_command waybar
 }
+
+# autostart
 
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 

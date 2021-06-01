@@ -11,10 +11,10 @@ fet.sh
 
 source $ZSH/oh-my-zsh.sh
 
-alias bw="wpg --backend wal -s ~/.config/wall.png"
 alias update="trizen --noconfirm -Syuu --sudo-autorepeat-at-runtime"
 alias lsblk="lsblk -f"
 alias v="nvim"
+alias mc="mc --nocolor"
 
 test -r "~/scripts/.dir_colors" && eval $(dircolors ~/scripts/.dir_colors)
 
