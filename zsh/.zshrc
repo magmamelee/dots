@@ -5,9 +5,8 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting 
+  zsh-vi-mode
 )
-
-fet.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -15,6 +14,7 @@ alias update="trizen --noconfirm -Syuu --sudo-autorepeat-at-runtime"
 alias lsblk="lsblk -f"
 alias v="nvim"
 alias mc="mc --nocolor"
+alias :q="exit"
 
 test -r "~/scripts/.dir_colors" && eval $(dircolors ~/scripts/.dir_colors)
 

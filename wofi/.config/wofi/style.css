@@ -1,15 +1,13 @@
 window {
     margin: 5px;
-    border: 1px solid white;
+    border: 4px '89b482';
     background-color: #2e3440;
-    border-radius: 5px;
 }
 
 #input {
     margin: 5px;
     background: transparent;
     color: white;
-    border-radius: 5px;
     /* background-color: blue; */
 }
 

@@ -1,24 +1,11 @@
 {
   "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
+  "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 10, // Waybar height (to be removed for auto height)
   "width": 1920, // Waybar width
   // Bar
-  "modules-left": [
-    "sway/workspaces",
-    "sway/mode",
-  ],
-
-  "modules-center": ["sway/window"],
-  "modules-right": [
-    "pulseaudio",
-    "backlight",
-    "cpu",
-    "memory",
-    "network",
-    "battery",
-    "clock",
-  ],
+  "modules-left": ["clock"],
+  "modules-right": ["sway/workspaces"],
 
   // Modules
   "sway/workspaces": {
@@ -27,95 +14,9 @@
     "format": "{icon}",
     "icon-size": 15
   },
-  "sway/mode": {
-    "format": " resizing window"
-  },
-  "sway/window": {
-    "format": "{}",
-    "max-length": 30
-  },
-
-  "power": {
-  	"format":"", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Suspend' 'swaymsg exec systemctl suspend' -b 'shutdown' 'systemctl shutdown'"
-  },
 
   "clock": {
     "timezone": "Europe/Berlin",
-    "format": "{:%H:%M}",
-    "format-alt": "{:%d-%m-%Y}",
-  },
-  "cpu": {
-    "interval": 30,
-    "format": " {usage}%",
-    "max-length": 10,
-    "on-click": "alacritty -e htop",
-    "tooltip": false
-  },
-  "memory": {
-    "interval": 30,
-    "format": " {used:0.1f}G",
-    "on-click": "alacritty -e htop",
-    "tooltip": false
-  },
-  "backlight": {
-    "interval": 30,
-    "format": "{icon} {percent}%",
-    "format-icons": [""],
-    "on-scroll-down": "echo $((`cat /sys/class/backlight/amdgpu_bl0/brightness` - 5)) | sudo tee /sys/class/backlight/amdgpu_bl0/brightness",
-    "on-scroll-up": "echo $((`cat /sys/class/backlight/amdgpu_bl0/brightness` + 5)) | sudo tee /sys/class/backlight/amdgpu_bl0/brightness"
-  },
-  "battery": {
-    "bat": "BAT1",
-    "interval": 30,
-    "states": {
-      "warning": 30,
-      "critical": 15
+    "format": "{:%a %d %b %H:%M}",
     },
-    "format": "{icon} {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "format-full": " {capacity}%",
-    "max-length": 25
-  },
-  "network": {
-    "interface": "enp4s0", // (Optional) To force the use of this interface
-    "format-wifi": " {essid}",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-    "format-linked": " Disconnected",
-    "format-disconnected": " No network",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "interval": 5
-  },
-  "pulseaudio": {
-    "scroll-step": 1, // %, can be a float
-    "format": "{icon} {volume}",
-    "format-bluetooth": "{icon}   {volume}",
-    "format-bluetooth-muted": "  {icon} ",
-    "format-muted": "  {volume}",
-    "format-source-muted": "",
-    "on-click": "pactl set-sink-mute 0 toggle",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-  },
-  "custom/spotify": {
-      "format": " <span color=\"#F2F2F2\">{}</span>",
-      "format-alt-click": "click-right",
-      "interval": 10,
-      "signal": 20,
-      "return-type": "json",
-      "max-length": 2000,
-      "exec": "$HOME/.config/scripts/spotify.sh",
-      "exec-if": "pgrep spotify",
-      "escape": true,
-      "on-click": "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next && pkill -RTMIN+20 waybar",
-      "format-icons": {
-        "default": ""
-      }
-  },
 }

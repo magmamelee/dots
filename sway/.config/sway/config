@@ -7,10 +7,9 @@ set $right l
 
 # default apps
 set $term alacritty
-set $menu wofi --show=drun --lines=9 --prompt=""
 
 # output configuration
-output * bg ~/.config/wallpapers/gloomy_pixel_forest.jpg fill
+output * bg ~/.config/sway/EYFWLD.jpg fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
@@ -30,14 +29,14 @@ input * {
     # take screenshot
     bindsym $mod+Shift+s exec swaygrab region
 
+    # open launcher
+	bindsym $mod+d exec dmenu-wl_run -i -fn JetbrainsMonoNerdFont
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
     # Lock screen
     bindsym $mod+Shift+x exec swaylock -f -c 2e3440
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
 
     floating_modifier $mod normal
 
@@ -145,13 +144,13 @@ bindsym $mod+r mode "resize"
 # window decorations whatnot
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #5e81ac #4c566a #dcbb8c #5e81ac   #5e81ac
-client.focused_inactive #4c566a #4c566a #eceff4 #4c566a   #4c566a
-client.unfocused        #4c566a #4c566a #eceff4 #4c566a   #4c566a
+client.focused          #ebdbb2 #3c3836 #dcbb8c #ebdbb2   #ebdbb2
+client.focused_inactive #3c3836 #3c3836 #eceff4 #3c3836   #3c3836
+client.unfocused        #3c3836 #3c3836 #eceff4 #3c3836   #3c3836
 
 gaps outer 20
 gaps inner 20
-default_border pixel 4
+default_border pixel 3
 
 # bar
 

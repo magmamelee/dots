@@ -1,128 +1,40 @@
-
 * {
 	font-size: 14px;
-	margin-top: 5px;
-	font-family: Fira Code Nerd Font Mono;
+	font-family: Jetbrains Mono Nerd Font;
 	font-style: normal;
 	opacity: 1;
 }
 
 window#waybar {
 	background-color: transparent;
-	color: #d8dee9;
-}
-#workspaces, #tags {
-	background-color: #2e3440;
-	border-radius: 5px;
-	margin-left: 10px;
+	color: #ebdbb2;
 }
 
+#workspaces, #tags {
+    background-color: #2a2a2a;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 4px solid #ebdbb2;
+}
 #workspaces button, #tags button {
   background-color: transparent;
-	color: #d8dee9;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 0px;
-}
-#window {
-	color: #d8dee9;
-	background-color: #2e3440;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 5px;
 }
 
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-window#waybar.empty {
-	/* background-color: #2e3440; */
-}
-
-#workspaces button:hover, #tags button:hover {
-	box-shadow: inherit;
-	color: #5e81ac;
-}
 
 #workspaces button.focused, #tags button.focused {
-	color: #bb61fa;
-}
-#mode {
-	background-color: #910909;
-	margin-left: 5px;
-	border-radius: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+    color: #bb61fa;
 }
 
-#tags button {
-  color: #4c566a;
-  font-weight: 600;
-}
-
-#cpu, #memory, #backlight, #network, #pulseaudio, #battery {
-	background-color: #2e3440;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-#pulseaudio {
-	color: #d8dee9;
-	border-radius: 5px 0px 0px 5px;
-}
-
-#cpu {
-	color: #d8dee9;
-}
-
-#memory {
-	color: #d8dee9;
-}
-
-#network {
-  color: #d8dee9;
-	border-radius: 0px 5px 5px 0px;
-}
-
-#pulseaudio.muted {
-	border-radius: 5px 0px 0px 5px;
-	color: #d8dee9;
-}
-
-#battery {
-	background-color: #2e3440;
-	color: #FFFFFF;
-	border-radius: 5px 5px 5px 5px;
-	padding: 6px 6px 6px 6px;
-	margin-left: 8px;
-}
-
-#battery.charging {
-	color: #FFFFFF;
-}
-@keyframes blink {
-	to {
-		background-color: #ffffff;
-		color: #000000;
-	}
-}
-#battery.critical:not(.charging) {
-	background-color: #f53c3c;
-	color: #edc519;
-	animation-name: blink;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-label:focus {
-	background-color: #2e3440;
-}
 #clock {
-	background-color: #5e81ac;
-	color: #2e3440;
-	border-radius: 5px;
-	padding: 6px 10px 6px 10px;
-	margin-left: 8px;
-	margin-right: 10px;
+	background-color: #282828;
+	padding: 10px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+	margin-right: 20px;
+	border: 4px solid #ebdbb2;
 }
