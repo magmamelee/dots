@@ -36,7 +36,7 @@ input * {
     bindsym $mod+Shift+q kill
 
     # Lock screen
-    bindsym $mod+Shift+x exec swaylock -f -c 2e3440
+    bindsym $mod+Shift+x exec swaylock -f -c 282828
 
     floating_modifier $mod normal
 
@@ -150,7 +150,7 @@ client.unfocused        #3c3836 #3c3836 #eceff4 #3c3836   #3c3836
 
 gaps outer 20
 gaps inner 20
-default_border pixel 3
+default_border pixel 4
 
 # bar
 
