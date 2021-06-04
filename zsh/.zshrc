@@ -8,6 +8,8 @@ plugins=(
   zsh-vi-mode
 )
 
+pfetch
+
 source $ZSH/oh-my-zsh.sh
 
 alias update="trizen --noconfirm -Syuu --sudo-autorepeat-at-runtime"
@@ -23,3 +25,4 @@ export MOZ_ENABLE_WAYLAND=1
 export YAPF="/home/david/.local/bin"
 export PATH="$YAPF:$PATH"
 export PATH=$HOME/bin/nvim-linux64/bin:$PATH
+export _JAVA_AWT_WM_NONREPARENTING=1

@@ -27,7 +27,7 @@ input * {
     bindsym $mod+Return exec $term
 
     # take screenshot
-    bindsym $mod+Shift+s exec swaygrab region
+    bindsym $mod+Shift+s exec grimshot --notify save area
 
     # open launcher
 	bindsym $mod+d exec dmenu-wl_run -i -fn JetbrainsMonoNerdFont
