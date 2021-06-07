@@ -11,7 +11,7 @@ All Applications I use to make these dotfiles work they way they should.
 * text editor ~ neovim
 * file manager ~ nautilus
 * bar ~ waybar
-* application launcher ~ dmenu-wl
+* application launcher ~ rofi
 * fetch ~ pfetch
 
 ### installation
