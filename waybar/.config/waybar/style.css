@@ -15,6 +15,7 @@ window#waybar {
 	margin: 10px;
 	background-color: #282828;
 	border: 4px solid #ebdbb2;
+	border-radius: 10px;
 }
 
 #workspaces button {
@@ -39,6 +40,7 @@ window#waybar {
 
 #clock {
 	background-color: #282828;
+	border-radius: 10px;
 	padding: 10px;
 	margin: 10px;
 	border: 4px solid #ebdbb2;

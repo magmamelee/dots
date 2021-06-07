@@ -9,7 +9,7 @@ set $right l
 set $term alacritty
 
 # output configuration
-output * bg ~/.config/sway/EYFWLD.jpg fill
+output * bg ~/.config/sway/wallpapers/waterfall_gruv.jpg fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
@@ -27,10 +27,10 @@ input * {
     bindsym $mod+Return exec $term
 
     # take screenshot
-    bindsym $mod+Shift+s exec grimshot --notify save area
+    bindsym $mod+Shift+s exec grimshot --notify copy area
 
     # open launcher
-	bindsym $mod+d exec dmenu-wl_run -i -fn JetbrainsMonoNerdFont
+    bindsym $mod+d exec rofi -show drun -theme $HOME/.config/rofi/themes/gruvbox.rasi
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -148,8 +148,8 @@ client.focused          #ebdbb2 #3c3836 #dcbb8c #ebdbb2   #ebdbb2
 client.focused_inactive #3c3836 #3c3836 #eceff4 #3c3836   #3c3836
 client.unfocused        #3c3836 #3c3836 #eceff4 #3c3836   #3c3836
 
-gaps outer 20
-gaps inner 20
+gaps outer 30
+gaps inner 30
 default_border pixel 4
 
 # bar
@@ -161,5 +161,6 @@ bar {
 # autostart
 
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always mako
 
 include /etc/sway/config.d/*
