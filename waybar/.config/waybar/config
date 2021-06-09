@@ -1,9 +1,20 @@
+//   ___ ___ _______ ___ ___ _______  _______ _______
+//  |   Y   |   _   |   Y   |   _   \|   _   |   _   \
+//  |.  |   |.  1   |       |.  1   /|   1   |.  l   /
+//  |. / \  |.  _   |\  1  /|.  _   \|.  _   |.  _   1
+//  |:      |:  |   | |:  | |:  1    \:  |   |:  |   |
+//  |::.|:. |::.|:. | |::.| |::.. .  /::.|:. |::.|:. |
+//  `--- ---`--- ---` `---' `-------'`--- ---'--- ---`
+//####### ######### author: petrolblue
+//####### ######### date:	06/07/2021
+
+
 {
-  "layer": "top", // Waybar at top layer
-  "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 10, // Waybar height (to be removed for auto height)
-  "width": 1920, // Waybar width
-  // Bar
+  "layer": "top",
+  "position": "bottom",
+  "height": 10,
+  "width": 1920,
+
   "modules-left": ["clock"],
   "modules-right": ["sway/workspaces"],
 
@@ -17,7 +28,7 @@
             "2": "",
             "3": "",
 			"4": "",
-			"5": ""
+			"5": "",
             "8": "",
             "9": "",
             "urgent": "",
@@ -26,28 +37,7 @@
         }
     },
 
-  "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-  },
-
   "clock": {
-    "timezone": "Europe/Berlin",
     "format": "{:%a %d %b %H:%M}",
-    },
+  },
 }

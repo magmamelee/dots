@@ -1,5 +1,5 @@
 export ZSH="/home/david/.oh-my-zsh"
-ZSH_THEME="xiong-chiamiov"
+ZSH_THEME="minimal"
 
 plugins=(
   git
