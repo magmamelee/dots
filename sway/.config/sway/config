@@ -158,8 +158,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-gaps outer 20
-gaps inner 20
+gaps outer 1
+gaps inner 1
 default_border pixel 0
 
 bar {
