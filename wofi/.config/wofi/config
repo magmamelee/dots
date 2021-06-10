@@ -4,5 +4,5 @@ insensitive=true
 hide_scroll=true
 lines=5
 no_actions=true
-term=sakura
+term=gnome-terminal
 width=600
