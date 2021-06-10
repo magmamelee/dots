@@ -8,7 +8,7 @@ plugins=(
   zsh-vi-mode
 )
 
-pfetch
+./scripts/simple
 
 source $ZSH/oh-my-zsh.sh
 

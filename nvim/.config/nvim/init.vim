@@ -17,8 +17,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 call plug#end()
 									    		
@@ -27,8 +25,8 @@ call plug#end()
 """"""""""""""""""""""
 set number
 set ttyfast
-set showmode
-set showcmd
+set noshowmode
+set noshowcmd
 set title
 set number
 set hidden
@@ -46,7 +44,7 @@ set ignorecase
 set encoding=UTF-8
 set scrolloff=25
 set termguicolors
-set laststatus=0
+set laststatus=1
 
 """"""""""""""""""""""
 " config for plugins "
@@ -96,10 +94,6 @@ let g:WebDevIconsDefaultFileSymbolColor = s:blue
 let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
-" Airline
-let g:airline_theme='gruvbox'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif

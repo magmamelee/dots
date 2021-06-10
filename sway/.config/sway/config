@@ -21,7 +21,7 @@ set $menu rofi -show drun -theme $HOME/.config/rofi/themes/gruvbox.rasi
 set $screenshot grimshot --notify copy area
 
 # output configuration
-output * bg ~/.config/sway/wallpapers/forest.jpg fill
+output * bg ~/.config/sway/wallpapers/girl.jpg fill
 output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
@@ -41,8 +41,12 @@ input * {
     # take screenshot
     bindsym $mod+Shift+s exec $screenshot
 
+	# toggle waybar
+	bindsym $mod+n exec pkill -SIGUSR1 '^waybar$'
+
     # open launcher
     bindsym $mod+d exec $menu
+	bindsym $mod+p exec rofi -show p -modi p:~/.config/rofi/scripts/rofi-power-menu
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -162,7 +166,7 @@ client.unfocused        #282828 #282828 #eceff4 #282828   #282828
 
 gaps outer 30
 gaps inner 30
-default_border pixel 5
+default_border pixel 2
 
 # bar
 

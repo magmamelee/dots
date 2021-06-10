@@ -10,13 +10,13 @@
 
 
 {
-  "layer": "top",
+  "layer": "top|bottom",
   "position": "bottom",
   "height": 10,
   "width": 1920,
 
   "modules-left": ["clock"],
-  "modules-right": ["sway/workspaces"],
+  "modules-right": ["sway/workspaces","custom/power"],
 
   // Modules
   "sway/workspaces": {
@@ -39,5 +39,11 @@
 
   "clock": {
     "format": "{:%a %d %b %H:%M}",
+  },
+
+  "custom/power": {
+	  "format": "{icon}",
+	  "format-icons": "",
+      "on-click":"rofi -show p -modi p:~/.config/rofi/scripts/rofi-power-menu"
   },
 }
