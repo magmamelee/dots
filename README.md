@@ -9,10 +9,10 @@ All Applications I use to make these dotfiles work they way they should.
 * terminal ~ alacritty
 * shell ~ zsh
 * text editor ~ neovim
-* file manager ~ nautilus
+* file manager ~ none
 * bar ~ waybar
 * application launcher ~ rofi
-* fetch ~ pfetch
+* fetch ~ my fetch script
 
 ### installation
 
