@@ -174,9 +174,9 @@ input type:touchpad {
 # window decorations whatnot
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #928374 #282828 #dcbb8c #928374   #928374
-client.focused_inactive #282828 #282828 #eceff4 #282828   #282828
-client.unfocused        #282828 #282828 #eceff4 #282828   #282828
+client.focused          #4db394 #4db394 #66d4ce #4db394   #4db394
+client.focused_inactive #4db394 #4db394 #459692 #4db394   #4db394
+client.unfocused        #4db394 #4db394 #459692 #4db394   #4db394
 
 gaps outer 1
 gaps inner 1
