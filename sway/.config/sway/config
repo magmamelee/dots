@@ -1,57 +1,59 @@
+#  _______ ___ ___ _______ ___ ___
+# |   _   |   Y   |   _   |   Y   |
+# |   1___|.  |   |.  1   |       |
+# |____   |. / \  |.  _   |\  1  /
+# |:  1   |:      |:  |   | |:  |
+# |::.. . |::.|:. |::.|:. | |::.|
+# `------ `--- ---`--- ---` `---'
+######### #########	author: petrolblue (edited by rasmeet)
+######### ######### date:   06/07/2021 (edited 06/13/2021)
+
 # Variables
-
 set $mod Mod4
-
 set $left h
 set $down j
 set $up k
 set $right l
 
 # default apps
-set $term sakura
-set $menu wofi --show=drun --lines=9 --prompt=""
+set $term gnome-terminal
+set $menu rofi -show drun -theme $HOME/.config/rofi/themes/gruvbox.rasi
+set $screenshot grimshot --notify copy area
 
 # output configuration
-
-output * bg ~/.config/wallpapers/aenami_stay_UltraHD.png fill
-output DP-1 mode 1366x768@60.02Hz
+output * bg ~/.config/sway/wallpapers/girl.jpg fill
+output DP-1 mode 2560x1440@143.999Hz
 
 exec swayidle -w \
           timeout 300 'swaylock -f -c 2e3440' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-# input configuration
-
 input * {
 	xkb_layout us
 }
+
 # keybindings
 
     # Start a terminal
     bindsym $mod+Return exec $term
 
     # take screenshot
-    bindsym $mod+Shift+s exec swaygrab region
+    bindsym $mod+Shift+s exec $screenshot
+
+	# toggle waybar
+	bindsym $mod+n exec pkill -SIGUSR1 '^waybar$'
+
+    # open launcher
+    bindsym $mod+d exec $menu
+	bindsym $mod+p exec rofi -show p -modi p:~/.config/rofi/scripts/rofi-power-menu
 
     # Kill focused window
     bindsym $mod+Shift+q kill
 
     # Lock screen
-    bindsym $mod+Shift+x exec swaylock -f -c 2e3440
+    bindsym $mod+Shift+x exec swaylock -f -c 282828
 
-    # Start your launcher
-    bindsym $mod+d exec $menu
-
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
     floating_modifier $mod normal
 
     # Reload the configuration file
@@ -137,8 +139,6 @@ input * {
     # Show the next scratchpad window or hide the focused scratchpad window.
     bindsym $mod+minus scratchpad show
 
-    for_window [app_id="pycharm"] floating enable
-
 # resizing containers
 
 mode "resize" {
@@ -152,18 +152,45 @@ mode "resize" {
     bindsym Up resize shrink height 10px
     bindsym Right resize grow width 10px
 
-    # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
+focus_follows_mouse no
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+}
+
+# window decorations whatnot
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #928374 #282828 #dcbb8c #928374   #928374
+client.focused_inactive #282828 #282828 #eceff4 #282828   #282828
+client.unfocused        #282828 #282828 #eceff4 #282828   #282828
+
 gaps outer 1
 gaps inner 1
-default_border pixel 0
+default_border pixel 1
+
+# bar
 
 bar {
     swaybar_command waybar
 }
+
+# autostart
+
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always mako
 
 include /etc/sway/config.d/*
